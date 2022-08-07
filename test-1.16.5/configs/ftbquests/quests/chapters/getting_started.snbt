@@ -1,0 +1,200 @@
+{
+	id: "1B3720D8B2C9A0C9"
+	group: ""
+	order_index: 1
+	filename: "getting_started"
+	title: "Getting started"
+	icon: "minecolonies:blockhuttownhall"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			subtitle: "New Beginnings"
+			description: ["To start off with your colony you need a supply camp! Craft one and place it down to get the basic materials and start for your kindom!"]
+			dependency_requirement: "one_started"
+			id: "43EFDA52091B384A"
+			tasks: [{
+				id: "2FF9EA42D2AF50BA"
+				type: "item"
+				item: "minecolonies:supplycampdeployer"
+			}]
+			rewards: [{
+				id: "6E894A4039B2C41C"
+				type: "item"
+				item: "minecraft:cookie"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 1.5d
+			description: ["To officially create your colony, you need a townhall! Grab it from your newly build camp and place it in your desired location."]
+			dependencies: ["43EFDA52091B384A"]
+			dependency_requirement: "one_completed"
+			id: "4FBFB06A728DBF9A"
+			tasks: [{
+				id: "1828AAB138AB5CBF"
+				type: "item"
+				item: "minecolonies:blockhuttownhall"
+			}]
+			rewards: [{
+				id: "01E5C437EEDE6502"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+		}
+		{
+			x: 1.5d
+			y: 0.0d
+			description: ["This is your tool needed to locate where you are building your future colony along with what theme you are using!"]
+			dependencies: ["43EFDA52091B384A"]
+			dependency_requirement: "one_started"
+			id: "7D6FAB3EC345EBF8"
+			tasks: [{
+				id: "14356C4F46A47019"
+				type: "item"
+				item: "structurize:sceptergold"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 3.0d
+			description: ["Now that you got your townhall placed and citizens spawning you need a builder to build it up, craft a buider's hut and place it down in your desired location to get one! (Tip: make sure to build your builders hut first) (Tip #2: You can have multiple builders huts)"]
+			dependencies: ["4FBFB06A728DBF9A"]
+			id: "1D70F9E8E26831CB"
+			tasks: [{
+				id: "725A4B75F6919998"
+				type: "item"
+				item: "minecolonies:blockhutbuilder"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 4.0d
+			description: ["The house is an essential part of your colony, it allows citizens to sleep and stay safe away from dangerous mobs, it will also allow your citizens to create children which will boost the population of your colony!"]
+			dependencies: ["1D70F9E8E26831CB"]
+			dependency_requirement: "one_started"
+			id: "6BCCABBB520E0AAA"
+			tasks: [{
+				id: "130EFAEEF04EC929"
+				type: "item"
+				item: "minecolonies:blockhutcitizen"
+			}]
+		}
+		{
+			x: 2.5d
+			y: 4.0d
+			description: ["The tavern is a place where wanderers come and rest for a while until taking off again. You can make wanders stay for a price, although it is random. Your tavern is also a place for your citizens to stay while there are no houses present."]
+			dependencies: ["1D70F9E8E26831CB"]
+			dependency_requirement: "one_started"
+			id: "4E39A03CF3686528"
+			tasks: [{
+				id: "437B71186FF747C3"
+				type: "item"
+				item: "minecolonies:blockhuttavern"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 5.5d
+			description: ["The farmer is a useful job since it allows you to grow your own crops for your citizens. Although you need fields for the farmer to work in!"]
+			dependencies: ["6BCCABBB520E0AAA"]
+			dependency_requirement: "one_started"
+			id: "1199C48FD984AF81"
+			tasks: [
+				{
+					id: "6A8DB1DCEE9216D7"
+					type: "item"
+					item: "minecolonies:blockhutfarmer"
+				}
+				{
+					id: "3E17A7D5E854A8A1"
+					type: "item"
+					item: "minecolonies:blockhutfield"
+				}
+			]
+			rewards: [{
+				id: "2D55EA3BA83B5A27"
+				type: "item"
+				item: "minecraft:potato"
+				count: 16
+			}]
+		}
+		{
+			x: 3.5d
+			y: 5.5d
+			dependencies: ["1199C48FD984AF81"]
+			dependency_requirement: "one_started"
+			id: "3B864384C34F3918"
+			tasks: [{
+				id: "0CC74B2D57CEB095"
+				type: "item"
+				item: "minecolonies:blockhutcook"
+			}]
+			rewards: [{
+				id: "7ECBDEA289AE7096"
+				type: "item"
+				item: "farmersdelight:ham"
+				count: 15
+			}]
+		}
+		{
+			x: -1.5d
+			y: 4.5d
+			description: ["The mine is a very useful building to have, although not neccesary right away, it is very dangerous for your worker in the mine. (Tip: check the mine every so often to make sure no mobs are hurting your miner)"]
+			dependencies: ["6BCCABBB520E0AAA"]
+			id: "043829240AF329C0"
+			tasks: [{
+				id: "78ABA2EB467985F9"
+				type: "item"
+				item: "minecolonies:blockhutminer"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 5.5d
+			description: ["The Forester chops down trees and keeps the wood inside its building, very useful and keeps the builder happy!"]
+			dependencies: ["6BCCABBB520E0AAA"]
+			id: "7FA6200001942AE3"
+			tasks: [{
+				id: "384C0480661F1374"
+				type: "item"
+				item: "minecolonies:blockhutlumberjack"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 3.0d
+			description: ["The fisherman is a great alternative food source although it requires fishing rods for the worker."]
+			dependencies: ["6BCCABBB520E0AAA"]
+			id: "0E36822B57F6C354"
+			tasks: [{
+				id: "2680B4ADEA124A9C"
+				type: "item"
+				item: "minecolonies:blockhutfisherman"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 5.0d
+			description: ["You have reached the farthest I can lead you, everything is up to you now, lead your colony to higher stages, use your knowledge and grow stronger!"]
+			dependencies: [
+				"7FA6200001942AE3"
+				"043829240AF329C0"
+				"0E36822B57F6C354"
+			]
+			id: "6B476B6EBC46D960"
+			tasks: [{
+				id: "524492E050023B92"
+				type: "checkmark"
+				title: "All finished!"
+			}]
+			rewards: [{
+				id: "5119C24799EFB3D7"
+				type: "item"
+				item: "minecraft:diamond"
+			}]
+		}
+	]
+}

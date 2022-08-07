@@ -1,0 +1,172 @@
+{
+	id: "06744CFBCFC18044"
+	group: ""
+	order_index: 0
+	filename: "basic_needs"
+	title: "Basic Needs"
+	icon: "minecraft:oak_log"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Get punchin"
+			x: -0.5d
+			y: -0.5d
+			description: ["You need wood to start off, go punch a tree, don't worry it won't hurt!"]
+			id: "2DF65A6B03B7BEE2"
+			tasks: [{
+				id: "28CA1FB86EF1BF3F"
+				type: "item"
+				item: "minecraft:oak_log"
+				count: 5L
+			}]
+			rewards: [{
+				id: "7E435FDE4CA9A23E"
+				type: "item"
+				item: "minecraft:apple"
+				count: 5
+			}]
+		}
+		{
+			title: "Time to Craft!"
+			x: -0.5d
+			y: 1.0d
+			description: ["Craft yourself a workbench to create some tools!"]
+			dependencies: ["2DF65A6B03B7BEE2"]
+			id: "0BFEC4B368F68A62"
+			tasks: [{
+				id: "593CDA519E967908"
+				type: "item"
+				item: "minecraft:crafting_table"
+			}]
+			rewards: [{
+				id: "5A007423EBD55A83"
+				type: "item"
+				item: "minecraft:oak_log"
+				count: 5
+			}]
+		}
+		{
+			title: "Turn up the heat!"
+			x: 0.5d
+			y: 2.5d
+			description: ["Craft a furnace for future use."]
+			dependencies: ["0BFEC4B368F68A62"]
+			id: "5BEAABA8309EFC51"
+			tasks: [{
+				id: "6453B82A577DC2BD"
+				type: "item"
+				item: "minecraft:furnace"
+			}]
+			rewards: [{
+				id: "6AF5125D5749CDE5"
+				type: "item"
+				item: "minecraft:coal"
+				count: 10
+			}]
+		}
+		{
+			title: "Slightly Better"
+			x: -1.5d
+			y: 2.5d
+			description: ["Craft these improvised stone tools, better than wood!"]
+			dependencies: ["0BFEC4B368F68A62"]
+			id: "4D92F753F45FED94"
+			tasks: [
+				{
+					id: "5B22C0BAC5BE4FD0"
+					type: "item"
+					item: {
+						id: "minecraft:stone_sword"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "4A000F77BD264A15"
+					type: "item"
+					item: {
+						id: "minecraft:stone_pickaxe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "5A848CAB2BA5BD21"
+					type: "item"
+					item: {
+						id: "minecraft:stone_axe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "1EF233A935C036CC"
+					type: "item"
+					item: {
+						id: "minecraft:stone_shovel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "1EA8E351017E10AF"
+				type: "item"
+				item: "minecraft:cooked_beef"
+				count: 5
+			}]
+		}
+		{
+			title: "Way Better!"
+			x: -0.5d
+			y: 4.0d
+			description: ["Finally an upgrade! Use this iron for tools or armor."]
+			dependencies: [
+				"5BEAABA8309EFC51"
+				"4D92F753F45FED94"
+			]
+			id: "1FE0DE9520845CBD"
+			tasks: [
+				{
+					id: "1E94CF487F24B30F"
+					type: "item"
+					item: "minecraft:iron_ore"
+					count: 5L
+				}
+				{
+					id: "0D71AD0995390F18"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 5L
+				}
+			]
+		}
+		{
+			title: "Next Step"
+			x: -0.5d
+			y: 6.0d
+			subtitle: "All Done!"
+			description: ["You finished your basic needs! Now go and build a beautiful colony!"]
+			dependencies: ["1FE0DE9520845CBD"]
+			id: "105864BAD8C73BEB"
+			tasks: [{
+				id: "484DA449DDBC0E7F"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "3FFDC2B16310F79F"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+		}
+	]
+}
